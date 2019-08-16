@@ -1,0 +1,104 @@
+Requires Changes
+3 SPECIFICATIONS REQUIRE CHANGES
+thumbs.gif
+
+Thank you for submitting your project, I enjoyed reviewing it
+Suggestions
+Articles and links
+Become an ethereum freelancer in https://blocklancer.net/
+
+Chingu is a global collaboration platform and coding-cohort generator. We connect motivated learners with shared goals to learn, help and build together.
+https://chingu.io/
+
+This is an interesting article about a new dApp called Bloom. Check it out and take some ideas from it
+https://blog.hellobloom.io/a-starter-guide-to-using-the-bloom-mainnet-dapp-metamask-signing-up-77f403d13f9b
+
+Videos
+How the EVM works? https://www.youtube.com/watch?v=OYfy1-5nB64
+
+Add Smart Contract Functions
+Add a name and a symbol to the starNotary tokens.
+In the Starter Code (StarNotary.sol file) you implement:
+
+// Implement Task 1 Add a name and symbol properties
+// name: Is a short name to your token
+// symbol: Is a short string like 'USD' -> 'American Dollar'
+Very good :star:
+Suggestions
+This link is very good for understanding better ERC-721 and other important contract interfaces https://www.youtube.com/watch?v=-cknquI5LGA
+
+Add a function lookUptokenIdToStarInfo, that looks up the stars using the Token ID, and then returns the name of the star.
+
+Very good :star:
+Suggestions
+Explicitly label the visibility of functions and state variables. Functions can be specified as being external, public, internal or private. https://solidity.readthedocs.io/en/v0.4.24/contracts.html#visibility-and-getters
+
+I want to share this interesting article that is going to help you to write better functions and contracts in solidity
+
+https://hackernoon.com/hackpedia-16-solidity-hacks-vulnerabilities-their-fixes-and-real-world-examples-f3210eba5148
+
+Add a function called exchangeStars, so 2 users can exchange their star tokens. Do not worry about the price, just write code to exchange stars between users.
+
+:white_check_mark: //1. Passing to star tokenId you will need to check if the owner of _tokenId1 or _tokenId2 is the sender
+:white_check_mark: //3. Get the owner of the two tokens (ownerOf(_tokenId1), ownerOf(_tokenId1)
+
+Required
+:x: You don't need to transfer the token to the tempAddress, transfer the token directly.
+
+Write a function to Transfer a Star. The function should transfer a star from the address of the caller. The function should accept 2 arguments, the address to transfer the star to, and the token ID of the star.
+
+Very good :star:
+:white_check_mark: //1. Check if the sender is the ownerOf(_tokenId)
+:white_check_mark: //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
+
+Add supporting Unit Tests
+Tests for:
+
+1) The token name and token symbol are added properly.
+
+it('can add the star name and star symbol properly', async() => {
+
+});
+2) 2 users can exchange their stars.
+
+it('lets 2 users exchange stars', async() => {
+
+});
+3) Stars Tokens can be transferred from one address to another.
+
+it('lets a user transfer a star', async() => {
+
+});
+:white_check_mark: can add the star name and star symbol properly
+
+Required
+:x: lets 2 users exchange stars
+:x: lets a user transfer a star
+
+The tests are failing
+Screen Shot 2019-08-13 at 7.49.35 PM.png
+
+Deploy your Contract to Rinkeby
+truffle-config.js file should have settings to deploy the contract to the Rinkeby Public Network.
+
+Infura should be used in the truffle-config.js file for deployment to Rinkeby.
+
+Very good :star:
+Modify the front end of the DAPP
+When you click on the button "Look Up a Star" the application shows in the status the Star information.
+
+Required
+:x: The tests and somethings in the contract need to be adjusted, before this can be reviewed
+
+Add a Readme.md file
+The readme.md file should include the following:
+
+1) Your ERC-721 Token Name
+2) Your ERC-721 Token Symbol
+3) Version of the Truffle and OpenZeppelin used
+
+Very good :star:
+This is an excellent video on how to write even better READMEs https://www.youtube.com/watch?v=PC05prd2usY, check it out
+
+  DOWNLOAD PROJECT
+1   CODE REVIEW COMMENTS
