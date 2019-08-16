@@ -68,12 +68,12 @@ contract StarNotary is ERC721 {
         //3. Get the owner of the two tokens (ownerOf(_tokenId1), ownerOf(_tokenId1)
         //4. Use _transferFrom function to exchange the tokens.
         require(ownerOf(_tokenId1) == msg.sender || ownerOf(_tokenId2) == msg.sender, "Either the owner of _tokenId1 or _tokenId2 needs to be the sender");
-        address address1 = ownerOf(_tokenId1);
-        address address2 = ownerOf(_tokenId2);
-        address tempAddress = address(0x123);
-        _transferFrom(address1, tempAddress, _tokenId1);
-        _transferFrom(address2, address1, _tokenId2);
-        _transferFrom(tempAddress, address2, _tokenId1);
+       
+        address ownerId1 = ownerOf(_tokenId1);
+        address ownerId2 = ownerOf(_tokenId2);       
+        transferFrom(ownerId1, ownerId2, _tokenId1);
+        transferFrom(ownerId2, ownerId1, _tokenId2);
+        
     }
 
     // Implement Task 1 Transfer Stars
